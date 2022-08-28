@@ -73,16 +73,57 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:text="Warga" />
+            android:fontFamily="@font/nunito_sans"
+            android:text="Warga"
+            android:textSize="18sp" />
 
         <CheckBox
             android:id="@+id/checkBoxKetua"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/checkBoxWarga"
+            android:fontFamily="@font/nunito_sans"
             android:text="Ketua RT"
-            />
+            android:textSize="18sp" />
     </RelativeLayout>
 
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rolesRelLayout"
+        android:layout_marginTop="20sp"
+        android:id="@+id/rgUserGender"
+        >
+
+        <TextView
+            android:id="@+id/textViewJenisKelamin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_sans"
+            android:text="Jenis Kelamin"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4sp"/>
+
+        <RadioButton
+            android:id="@+id/radioBtnLaki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewJenisKelamin"
+            android:fontFamily="@font/nunito_sans"
+            android:text="Laki-laki"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioBtnPerempuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radioBtnLaki"
+            android:fontFamily="@font/nunito_sans"
+            android:text="Perempuan"
+            android:textSize="18sp" />
+    </RadioGroup>
 
 </RelativeLayout>

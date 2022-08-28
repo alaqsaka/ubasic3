@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private CheckBox checkBoxWarga;
     private CheckBox checkBoxKetua;
+    private RadioGroup userGender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +21,21 @@ public class MainActivity extends AppCompatActivity {
 
         checkBoxWarga = findViewById(R.id.checkBoxWarga);
         checkBoxKetua = findViewById(R.id.checkBoxKetua);
+
+        userGender = findViewById(R.id.rgUserGender);
+        userGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId) {
+                    case R.id.radioBtnLaki:
+                        Toast.makeText(MainActivity.this, "Laki-laki", Toast.LENGTH_SHORT).show();
+                    case R.id.radioBtnPerempuan:
+                        Toast.makeText(MainActivity.this, "Perempuan", Toast.LENGTH_SHORT).show();
+                    default:
+                        break;
+                }
+            }
+        });
         
         if(checkBoxWarga.isChecked()) {
             Toast.makeText(this, "Kamu ingin terdaftar sebagai warga", Toast.LENGTH_SHORT).show();
