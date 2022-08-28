@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="33sp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans"
+        android:text="Selamat Datang di\nRukun Tetangga"
+        android:textColor="#0094FF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/welcomeParagraph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeText"
+        android:layout_marginTop="15sp"
+        android:fontFamily="@font/nunito_sans"
+        android:text="Kami menyediakan fitur yang memudahkan admnistrasi dan memperat masyarakat"
+        android:textColor="#C4C4C4"
+        android:textSize="22sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/labelNoHp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeParagraph"
+        android:layout_marginTop="15sp"
+        android:fontFamily="@font/nunito_sans"
+        android:text="Nomor Handphone"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextHp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelNoHp"
+        android:layout_marginTop="13sp"
+        android:background="@drawable/edit_text_border"
+        android:hint="Masukkan nomor handphone"
+        android:padding="10sp"
+        android:textColor="#c4c4c4"
+        android:textSize="15dp" />
+
+    <RelativeLayout
+        android:id="@+id/rolesRelLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextHp"
+        android:layout_centerHorizontal="false"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_sans"
+            android:text="Daftar sebagai"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkBoxWarga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Warga" />
+
+        <CheckBox
+            android:id="@+id/checkBoxKetua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkBoxWarga"
+            android:text="Ketua RT" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
